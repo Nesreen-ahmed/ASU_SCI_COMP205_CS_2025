@@ -1,0 +1,85 @@
+//Solved by Malak Mohamed
+
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+long long factorial(int x) {
+	if (x < 0)
+		x = -x;
+	int p = 1;
+	for (int i = 1; i <= x; i++) {
+		p *= i;
+	}
+	return p;
+}
+class series {
+	float X[40];
+	int n;
+	double S1 ,S2;
+
+public:
+	void read() {
+		cout << "Enter number of elements:";
+		cin >> n;
+
+		cout << "Enter " << n << " data members:";
+		for (int i = 0; i < n; i++) {
+			cin >> X[i];
+		}
+        //you can use S1,S2 directly
+		double sum1 = 0; 
+		double sum2 = 0;
+		int sign = 1;
+		for (int i = 0; i < n; i++) {
+			int odd = 2 * i + 1;
+			int even = 2 * (i + 1);
+				
+			sum1 += sign * (factorial(odd) / sqrt(pow(X[i], odd)+sign*odd));
+					
+			sum2 += sign * (factorial(even) / sqrt(pow(X[i], even)+sign*even));
+			
+			sign *= -1;
+
+			
+		}
+		S1 = sum1;
+		S2 = sum2;
+	}
+	void display() {
+		cout << "Number of elements:"<<n<<endl;
+
+		cout << "Elements:" << endl;
+		for (int i = 0; i < n; i++) {
+			cout<< X[i]<<endl;
+		}
+
+		cout << "S1:" << S1<<endl;
+		cout << "S2:" << S2 << endl;
+	}
+
+	double sum() {
+		double total = S1 + S2;
+		return total;
+	}
+
+	void compareEquallity(series A) {
+		if( sum() == A.sum())
+            cout<<"both objects are equall\n";
+        else cout<<"two objects not equall\n";
+	}
+};
+
+int main() {
+	series x, y;
+	x.read();
+	x.display();
+
+	y.read();
+	y.display();
+
+    x.compareEquallity(y);
+	
+    return 0;
+
+}
