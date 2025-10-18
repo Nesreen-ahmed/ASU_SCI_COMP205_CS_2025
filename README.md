@@ -14,7 +14,7 @@
    
   - **Sheet Questions:**
 	   - [x] [ Solved by\ ** ** ] [Question one]() .
-	   - [x] [Solved by\ **  ** ] [Question two]() .
+	   - [x] [Solved by\ **Nada..🤍💫** ] [Question two](https://github.com/Nesreen-ahmed/ASU_SCI_COMP205_CS_2025/blob/b1b496c9d32822593200cc35a4f77131868eef5d/Sheet%202/Question%202.md) .
 	   - [x] [ Solved by\ **  ** ] [Question three]() .
 	   - [x] [ Solved by\ **ENG:Mariam Mohammed** ] [Homework Question]() .
 
