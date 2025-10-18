@@ -3,29 +3,29 @@
 #include <iostream>
 using namespace std;
 class Toy{
-    private:
-        string name;
-        float price, tax, net_price;  
-    public:
-        void read(){
-            cin>>name>>price>>tax;
-            net_price = price + (tax/100) * price;
+private:
+    string name;
+    float price, tax, net_price;  
+public:
+    void read(){
+        cin>>name>>price>>tax;
+        net_price = price + (tax/100) * price;
+    }
+    float getnetprice(){
+        return net_price;
+    }
+    void display(){
+        cout<<"name: "<<name<<endl;
+        cout<<"price: "<<price<<endl;
+        cout<<"tax: "<<tax<<endl;
+        cout<<"net_price: "<<net_price<<endl;
+    }
+    Toy compare(Toy t1){
+        if(net_price>t1.net_price){
+            return *this;
         }
-        float getnetprice(){
-            return net_price;
-        }
-        void display(){
-            cout<<"name: "<<name<<endl;
-            cout<<"price: "<<price<<endl;
-            cout<<"tax: "<<tax<<endl;
-            cout<<"net_price: "<<net_price<<endl;
-        }
-        Toy compare(Toy t1){
-            if(net_price>t1.net_price){
-                return *this;
-            }
-            return t1;
-        }
+        return t1;
+    }
 };
 int main(){
     int n;
