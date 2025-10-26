@@ -1,0 +1,119 @@
+//solved by Mohamed Salah
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+long long fact(int n)
+{
+	if (n < 0)
+		n = abs(n);
+	int f = 1;
+	for (int i = 1; i <= n; i++)
+	{
+		f *= i;
+	}
+	return f;
+};
+
+double nCr(int n, int r)
+
+{
+	double ncr = double(fact(n)) / ((fact(n - r) * fact(r)));
+
+	return ncr;
+};
+
+struct Series
+{
+	float a;
+	float X[20];
+	double S[20];
+	int m;
+
+	void read()
+	{
+
+		cout << "enter value of a : ";
+		cin >> a;
+		cout << endl;
+		cout << "enter value of number of elemant : ";
+		cin >> m;
+		cout << endl;
+		for (int i = 0; i < m; i++)
+
+		{
+			cout << "enter value of X[" << i + 1 << "] =  ";
+			cin >> X[i];
+			system("cls");
+		}
+
+		for (int i = 0; i < m; i++)
+
+		{
+			S[i] = 0;
+			for (int k = 0; k <= i; k++)
+			{
+
+				S[i] += nCr(i + 1, k) * X[i] * pow(a, i - k + 1);
+			}
+		}
+	}
+
+	void display()
+
+	{
+		for (int i = 0; i < m; i++)
+		{
+			cout << "Elemnt  X[" << i + 1 << "]  =  " << X[i] << endl;
+		}
+
+		for (int i = 0; i < m; i++)
+		{
+			cout << "Elemnt  S[" << i + 1 << "]  =  " << S[i] << endl;
+		}
+
+		cout<<"=================================\n";
+	}
+
+	double max()
+	{
+		double MAX = S[0];
+		for (int i = 1; i < m; i++)
+
+		{
+			if (S[i] > MAX)
+			{
+				MAX = S[i];
+			}
+		}
+		return MAX;
+	}
+};
+
+int main()
+{
+	Series ob1, ob2;
+
+	cout << "Enter ob1  \n\n ";
+	ob1.read();
+	cout << "Enter ob2  \n\n ";
+	ob2.read();
+
+	ob1.display();
+	ob2.display();
+
+	double max1, max2;
+
+	max1 = ob1.max();
+	max2 = ob2.max();
+
+	cout << " max1 - max2 = " << abs(max1 - max2) << endl;
+
+
+	if(max1>max2){
+		ob1.display();
+	}
+	else ob2.display();
+	return 0;
+};
