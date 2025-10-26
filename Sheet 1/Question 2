@@ -1,0 +1,104 @@
+//solved by Menna Mahmoud
+
+#include <iostream>
+#include <string>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+struct Num {
+    float N[10];
+    string T[10];
+    int m;
+
+    long long factorial(int n) {
+		if(n < 0) n = abs(n);
+        if (n == 1) return 1;
+        return n * factorial(n - 1);
+    }
+
+    bool isPrime(float n) {
+        if (n < 2) return false;
+        for (int i = 2; i <= sqrt(n); i++)
+            if (fmod(n , i) == 0) return false;
+        return true;
+    }
+
+    void readData() {
+        cout << "Enter number of elements (max 10): ";
+        cin >> m;
+        if (m > 10) m = 10;
+
+        cout << "Enter " << m << " numbers:\n";
+        for (int i = 0; i < m; i++) {
+            cin >> N[i];
+            if (isPrime(N[i]))
+                T[i] = "Yes";
+            else
+                T[i] = "No";
+        }
+    }
+
+    void display() {
+        cout << "\nN[i]\tT[i]\n";
+        cout << "----------------\n";
+        for (int i = 0; i < m; i++) {
+            cout << setw(4) << N[i] << "\t" << T[i] << endl;
+        }
+    }
+
+    long long sumPrime() {
+        long long s = 0;
+        for (int i = 0; i < m; i++) {
+            if (T[i] == "Yes")
+                s += factorial(N[i]);
+        }
+        return s;
+    }
+
+    long long productNonPrime() {
+        long long p = 1;
+        bool hasNonPrime = false;
+        for (int i = 0; i < m; i++) {
+            if (T[i] == "No") {
+                p *= factorial(N[i]);
+                hasNonPrime = true;
+            }
+        }
+        if (!hasNonPrime)
+            return 0;
+        return p;
+    }
+};
+
+void compareSum(Num N1, Num N2)
+{
+	if(N1.sumPrime()>N2.sumPrime())
+		N1.display();
+	else N2.display();
+}
+Num compareProd(Num N1, Num N2)
+{
+	if(N1.productNonPrime()>N2.productNonPrime())
+		return N2;
+	return N1;
+}
+int main() {
+    Num obj1, obj2;
+    obj1.readData();
+	obj2.readData();
+	cout<<"=============display===============\n";
+    obj1.display();
+	cout << "\nSum of factorials of prime= " << obj1.sumPrime() << endl;
+    cout << "Product of factorials of non-prime = " << obj1.productNonPrime() << endl;
+    obj2.display();
+	cout << "\nSum of factorials of prime= " << obj2.sumPrime() << endl;
+    cout << "Product of factorials of non-prime = " << obj2.productNonPrime() << endl;
+    
+	cout<<"Compare Sum:\n";
+	compareSum(obj1,obj2);
+
+	cout<<"Compare Product:\n";
+	compareProd(obj1,obj2).display();
+	return 0;
+}
