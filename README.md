@@ -25,7 +25,7 @@
 	   - [x] [ Solved by\ **Heba** ] [Question one](https://github.com/Nesreen-ahmed/ASU_SCI_COMP205_CS_2025/blob/27e572e551b15346eee554b4f3fe4878ebd39d47/Sheet%203/Question%201) .
 	   - [x] [Solved by\ **🜲Shⱥωқ¥𒆙** ] [Question two](https://github.com/Nesreen-ahmed/ASU_SCI_COMP205_CS_2025/blob/9d3545f7a190db5360c19ed8652ec3f57f393815/Sheet%203/Question%202) .
 	   - [x] [ Solved by\ **Mohamed Tapl** ] [Question three](https://github.com/Nesreen-ahmed/ASU_SCI_COMP205_CS_2025/blob/93bc4afd2080ca6ad5af6a8edf046df79a9696a5/Sheet%203/Question%203) .
-       - [ ] [ Solved by\ **** ] [Question four]()
+       - [X] [ Solved by\ **Soma 🥰♥️** ] [Question four](https://github.com/Nesreen-ahmed/ASU_SCI_COMP205_CS_2025/blob/2d35ab13fec3e02dae958c2c347026cf05915627/Sheet%203/Question%204)
 	   - [ ] [ Solved by\ **** ] [Homework Question]() .
 
 ---
