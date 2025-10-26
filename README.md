@@ -3,8 +3,7 @@
    
   - **Sheet Questions:**
 	   - [x] [ Solved by\ **Mohamed Salah**] [Question one](https://github.com/Nesreen-ahmed/ASU_SCI_COMP205_CS_2025/blob/d6a95770db80c42e30055dd8b770215fcb3b5e99/Sheet%201/Question%201) .
-	   - [ ] [ Solved by\ **** ] [Question two]() .
-       - [ ] [ Solved by\ **** ] [Question three]().
+	   - [x] [ Solved by\ **Menna Mahmoud** ] [Question two](https://github.com/Nesreen-ahmed/ASU_SCI_COMP205_CS_2025/blob/eedc80413863c9463bda42f5f54f126865b12eaf/Sheet%201/Question%202) .
 	   - [ ] [ Solved by\ **** ] [Homework Question]().
 
 ---
