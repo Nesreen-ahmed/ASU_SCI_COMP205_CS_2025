@@ -23,7 +23,7 @@
    
   - **Sheet Questions:**
 	   - [x] [ Solved by\ **Heba** ] [Question one](https://github.com/Nesreen-ahmed/ASU_SCI_COMP205_CS_2025/blob/27e572e551b15346eee554b4f3fe4878ebd39d47/Sheet%203/Question%201) .
-	   - [x] [Solved by\ **** ] [Question two]() .
+	   - [x] [Solved by\ **🜲Shⱥωқ¥𒆙** ] [Question two](https://github.com/Nesreen-ahmed/ASU_SCI_COMP205_CS_2025/blob/9d3545f7a190db5360c19ed8652ec3f57f393815/Sheet%203/Question%202) .
 	   - [x] [ Solved by\ **** ] [Question three]() .
        - [x] [ Solved by\ **** ] [Question four]()
 	   - [x] [ Solved by\ **** ] [Homework Question]() .
