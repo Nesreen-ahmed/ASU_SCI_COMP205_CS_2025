@@ -22,7 +22,7 @@
 - ## Week 23/10/2025 ( Sheet 3 ) 
    
   - **Sheet Questions:**
-	   - [x] [ Solved by\ **** ] [Question one]() .
+	   - [x] [ Solved by\ **Heba** ] [Question one](https://github.com/Nesreen-ahmed/ASU_SCI_COMP205_CS_2025/blob/27e572e551b15346eee554b4f3fe4878ebd39d47/Sheet%203/Question%201) .
 	   - [x] [Solved by\ **** ] [Question two]() .
 	   - [x] [ Solved by\ **** ] [Question three]() .
        - [x] [ Solved by\ **** ] [Question four]()
