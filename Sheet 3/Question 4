@@ -1,0 +1,106 @@
+//solved by Soma 🥰♥️
+
+#include<iostream>
+#include<cmath>
+using namespace std;
+class list{
+private:
+int A[30];
+int n;
+public:
+	void read(){
+		cout<<"please enter size of array/n";
+		cin>>n;
+		for(int i=0;i<n;i++){
+			cin>>A[i];
+		}
+	}
+	void sort(){
+		// selection sort
+        for(int i=0;i<n;i++){
+            int	minindex=i;
+            for(int j=i+1;j<n;j++){
+                if(A[i]<A[j])
+                    minindex=j;
+            }
+            swap(A[i],A[minindex]);
+        }
+	}
+
+	bool search(int key){
+        sort();
+        int L=0,R=n-1;
+        while(L <= R){
+            int m =(L+R)/2;
+            cout<<m<<"\t";
+            if(A[m]==key)
+                return true;
+            else if(A[m]<key){
+                R=m-1;
+            }
+            else{
+                L=m+1;
+            }
+        }
+        return false;
+    }
+	float average(){
+		float sum=0;
+		for(int i=0;i<n;i++){
+            sum+=A[i];
+		}
+		return sum/n;
+	}
+    static void compare(list Q, list R){
+        if(Q.n != R.n){
+            cout<<"length not equall\n";
+            return;
+        }
+        Q.sort();
+        R.sort();
+        
+        if(Q.A[Q.n-1]>R.A[R.n-1])
+            Q.display();
+        else R.display();
+    }
+
+    void compare_average(list Y){
+        if (average()>Y.average())
+            display();
+        else Y.display();
+    }
+    void display(){
+        for(int i=0;i<n;i++){
+            cout<<A[i]<<"\t";
+        }
+        cout<<endl;
+    }
+};
+
+int main(){
+	list E1,E2;
+	int key;
+	cout<<"please enter value of array/n";
+	E1.read();
+	E1.sort();
+    cout<<"E1 sorted: ";
+	E1.display();
+	cout<<"please enter value of array/n";
+	E2.read();
+	E2.sort();
+	cout<<"E2 sorted: ";
+	E2.display();
+	cin>>key;
+	if(E1.search(key))
+		cout<<key<<" exist E1\n";
+	else
+		cout<<key<<" not exist E1\n";
+	cout<<"average of E1="<<E1.average()<<endl;
+	cout<<"average of E2="<<E2.average()<<endl;
+	list::compare(E1,E2);
+		
+	E1.compare_average(E2);
+
+	system("pause");
+	return 0;
+}
