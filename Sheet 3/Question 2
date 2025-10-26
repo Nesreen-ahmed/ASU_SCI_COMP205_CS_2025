@@ -1,0 +1,35 @@
+//solved by 🜲Shⱥωқ¥𒆙
+
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+class student {
+    string name; float age; int id;
+    static int count;
+public:
+    void read() {
+        cin >> name >> age; id = count;
+        count++;
+    }
+    void display() {
+        cout << name << " " << age << " " << id << "\n";
+    }
+
+	static void dispalyCount()
+	{
+		cout<<"count of objects: "<<count-3000<<endl;
+	}
+};
+int student::count = 3000;
+int main() {
+    student a[50];
+    int n; cin >> n;
+    for (int i = 0; i < n; i++)a[i].read();
+    for (int i = 0; i < n; i++)a[i].display();
+
+	student::dispalyCount();
+
+    return 0;
+}
